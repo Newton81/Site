@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+ <html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+ <h:head>
+ <title>Maquinas Agricolas </title>
+ </h:head>
+ <h:body>
+ <style>
+            body{
+                background-image: url("#{'imagens2/3.png'}");
+                background-size: cover;
+    			background-repeat: no-repeat; 
+    			background-attachment:fixed;         
+            }
+        </style>
+
+ 
+ 
+<h:form>
+
+
+ 
+
+        
+            
+   <p:tabMenu activeIndex="#{param.i}" style="margin-top: -12px">
+    <p:menuitem value="Inicio" outcome="inicio.xhtml" icon="ui-icon-star">
+        <f:param name="i" value="0" />
+    </p:menuitem>
+    <p:menuitem value="Empresas" url="empresas.xhtml" icon="ui-icon-document">
+        <f:param name="i" value="1" />
+    </p:menuitem>
+    <p:menuitem value="Tratores" url="tratores.xhtml" icon="ui-icon-search">
+        <f:param name="i" value="2" />
+    </p:menuitem>
+    <p:menuitem value="Safras" url="safras-producao.xhtml" icon="ui-icon-search">
+        <f:param name="i" value="3" />
+    </p:menuitem>
+    <p:menuitem value="Contato" outcome="contato.xhtml" icon="ui-icon-person">
+        <f:param name="i" value="4" />
+    </p:menuitem>
+    <p:menuitem value="CadastrarMsg" outcome="cadastro.html" icon="ui-icon-person">
+        <f:param name="i" value="5" />
+    </p:menuitem>
+    <p:menuitem value="editarPessoa" outcome="editarPessoa.xhtml" icon="ui-icon-search">
+        <f:param name="i" value="6" />
+    </p:menuitem>
+    <p:menuitem value="cadastrarPessoa" outcome="cadastrarPessoa.xhtml" icon="ui-icon-person">
+        <f:param name="i" value="7" />
+    </p:menuitem>
+    
+    
+</p:tabMenu>
+ </h:form>
+          
+
+
+  <h:form>  
+    
+</h:form>
+    
+ <ui:insert name ="corpo-da-pagina">  </ui:insert>
+ 
+ 
+ <br/><br/>
+
+ <div id="footer" style ="text-align: center">
+  <hr/> <p >Desenvolvido por  <a href="https://www.facebook.com/newton.rubens">Newton</a> e <a href="https://www.facebook.com/profile.php?id=100005573148861">Lucas Palhares</a> &copy;</p> 
+ </div>
+
+ </h:body>
+ </html>

@@ -1,0 +1,90 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Atividade</title>
+	</h:head>
+	<ui:define name="corpo-da-pagina">
+	<br/>
+	<center><p:outputLabel id="conteudo" style="font-weight:bold; font-size:24px" value="Tratores da atualidade:" /> </center>
+
+
+<br/>
+
+<p:dataTable var="trato" value="#{CadastrarMB.tratores}">
+    
+    <p:column headerText="Modelo">
+        <h:outputText value="#{trato.modelo}" />
+    </p:column>
+    
+    <p:column headerText="Nome">
+        <h:outputText value="#{trato.nome}" />
+    </p:column>
+ 
+    <p:column headerText="Ano">
+        <h:outputText value="#{trato.ano}" />
+    </p:column>
+ 
+    <p:column headerText="Marca">
+        <h:outputText value="#{trato.marca}" />
+    </p:column>
+ 
+    <p:column headerText="Cor">
+        <h:outputText value="#{trato.cor}" />
+    </p:column>
+</p:dataTable>
+
+<br/>
+<center><h:outputLabel style="font-weight:bold; font-size:26px">Tratores Classicos:</h:outputLabel></center>
+<br/>
+    <p:accordionPanel multiple="true">
+        <p:tab title="Trator Agrale">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="/imagens2/ag.png" style=" width:100px" />
+                <h:outputText
+                    value="1968 - Lançamento do microtrator de quatro rodas Agrale 415, primeiro trator fabricado no Rio Grande do Sul, marco no processo de mecanização da agricultura familiar brasileira, ainda hoje em produção (atual linha 4.100) e líder em sua classe. Produção inicial de 2
+                     novos modelos de motores a diesel estacionários, de um e dois cilindros." />
+            </h:panelGrid>
+        </p:tab>
+        
+         <p:tab title="Trator John Deere">
+            <h:panelGrid columns="2" cellpadding="10">
+               <p:graphicImage url="/imagens2/jd.png" style=" width:100px" />
+                <h:outputText value="1947 – Lançamento do trator MODEL M que ficou conhecido como “Rastejador”. Mais tarde foi oferecido como trator de esteira e depois como retroescavadeira, marcando assim o ingresso da empresa no mercado de equipamentos de construção."/>
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Trator Valtra">
+            <h:panelGrid columns="2" cellpadding="10">
+               <p:graphicImage url="/imagens2/vt.png" style=" width:100px" />
+                <h:outputText value="1913 - Primeiro trator de Munktell
+Primeiro óleo bruto da Munktell ligou o motor puksuttamaan Munktell em 1905. A máquina a vapor foi um grande artista nômade. Ao iniciar o motor de combustão interna e o arado de vapor combinado, foi carregado tractor.
+" />
+            </h:panelGrid>
+        </p:tab>
+       
+       <p:tab title="Trator Massey Ferguson">
+            <h:panelGrid columns="2" cellpadding="10">
+               <p:graphicImage url="/imagens2/mf.png" style=" width:100px" />
+              
+                <h:outputText value="1955 – Massey Ferguson 50
+O novo Ferguson 35 foi lançado nos Estados Unidos em 5 de janeiro de 1955, um ano antes do planejado.
+" />
+            </h:panelGrid>
+        </p:tab>
+       
+    </p:accordionPanel>
+
+<h:form> <h:outputLink value="imagens2/jd.png">download foo.exe    </h:outputLink>
+<h:outputLink value="imagens2/jdd.png">download bar.zip      </h:outputLink>
+
+<h:outputLink value="imagens2/#{myBean.jd}">
+    <h:outputText value="download #{myBean.jd}" />
+</h:outputLink> </h:form>
+</ui:define>
+</ui:composition>

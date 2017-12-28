@@ -1,0 +1,47 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Atividade</title>
+	</h:head>
+	<ui:define name="corpo-da-pagina">
+	<br/>
+	<center><p:outputLabel id="conteudo"  style="font-weight:bold; font-size:24px" value="Safras:" /> </center>
+
+
+<br/>
+
+<p:dataTable var="safrar" value="#{ContatoMB.safras}">
+ 
+    
+     <p:column headerText="Nome">
+        <h:outputText value="#{safrar.nome}" />
+    </p:column>
+   
+    <p:column headerText="Ano">
+        <h:outputText value="#{safrar.ano}" />
+    </p:column>
+   
+ 
+    <p:column headerText="Producao/MilToneladas">
+        <h:outputText value="#{safrar.producao}" />
+    </p:column>
+ 
+    <p:column headerText="Produtividade/kg/ha">
+        <h:outputText value="#{safrar.produtividade}" />
+    </p:column>
+ 
+    <p:column headerText="Valor/Saca">
+        <h:outputText value="#{safrar.valorSaca}" />
+    </p:column>
+</p:dataTable>
+
+
+</ui:define>
+</ui:composition>

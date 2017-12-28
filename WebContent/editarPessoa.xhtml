@@ -1,0 +1,49 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Atividade</title>
+	</h:head>
+	<ui:define name="corpo-da-pagina">
+	<br/>
+	<center><p:outputLabel id="conteudo" style="font-weight:bold; font-size:22px" value="Editar Cadastro:" /> 
+	
+<h:form>
+<br/><br/>
+    <p:messages id="messages" />
+            <p:panelGrid columns="2">
+            
+                  <h:inputHidden value="#{pessoaBean.pessoa.usuarioid}" />
+  
+                <div align="center">
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="Id" for="ID" />
+                        <h:inputText id="ID" value="#{pessoaBean.pessoa.usuarioid}" />
+  
+                        <h:outputLabel value="Email" for="email" />
+                        <h:inputText id="email" value="#{pessoaBean.pessoa.email}" />
+                        
+                         <h:outputLabel value="Endereço" for="endereco" />
+                        <h:inputText id="endereco" value="#{pessoaBean.pessoa.endereco}" />
+                   
+                        
+                         <h:outputLabel value="Nome" for="nome" />
+                        <h:inputText id="nome" value="#{pessoaBean.pessoa.nome}" />
+  
+   							<h:outputLabel value="Senha" for="senha" />
+                        <h:inputText id="senha" value="#{pessoaBean.pessoa.senha}" />
+                         </h:panelGrid>
+                    <h:commandButton value="Confirmar" action="#{pessoaBean.update}" />
+                </div>
+   
+            </p:panelGrid>
+        </h:form>
+        </center>
+        </ui:define>
+        </ui:composition>

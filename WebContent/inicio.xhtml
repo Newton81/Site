@@ -1,0 +1,26 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Atividade</title>
+	</h:head>
+	<ui:define name="corpo-da-pagina">
+
+
+<br/><br/>
+<center><p:imageSwitch effect="shuffle">
+    <ui:repeat value="#{imagens.images}" var="image">
+        <p:graphicImage url="imagens/#{image}" style="width:750px; height:500px" />
+    </ui:repeat>
+</p:imageSwitch>
+</center>
+
+
+</ui:define>
+</ui:composition>

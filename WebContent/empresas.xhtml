@@ -1,0 +1,49 @@
+<ui:composition template ="/WEB-INF/templates/template.xhtml"
+
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Atividade</title>
+	</h:head>
+	<ui:define name="corpo-da-pagina">
+	<br/>
+<center><h3 style="font-weight:bold; font-size:24px">Empresas:</h3></center>
+    <p:accordionPanel multiple="true">
+        <p:tab title="Agrale">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="/imagens2/a.png" style=" width:60px" />
+                <h:outputText
+                    value="A Agrale foi fundada como Agrisa - Indústria Gaúcha de Implementos Agrícolas SA, no município de Sapucaia do Sul, Rio Grande do Sul, em 14 de dezembro de 1962.
+                   Inicialmente montava pequenos tratores e cultivadores mecânicos, sob licença da marca alemã Bungartz." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="John Deere">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="/imagens2/d.png" style=" width:60px" />
+                <h:outputText value="A história de John Deere, ferreiro e inventor, anda de mãos dadas com a colonização e desenvolvimento da região centro-oeste dos Estados Unidos, uma área que os colonos do século XIX consideravam uma terra prometida paradisíaca.
+                 Desde 1837, toda a história da John Deere enquanto empresa tem sido uma história de pessoas, lugares e produtos que refletem os nossos valores fundamentais de integridade, qualidade, comprometimento e inovação." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Massey Fergunson">
+            <h:panelGrid columns="2" cellpadding="10">
+               <p:graphicImage url="/imagens2/m.png" style=" width:60px" />
+                <h:outputText value="Massey Ferguson é uma marca que surgiu em 1958, de fusão entre as marcas Massey Haris, originária dos Estados Unidos e Canadá e Ferguson, originária da Inglaterra.
+                 A marca possui linha completa de equipamentos agrícolas, incluindo tratores, colheitadeiras de grãos, pulverizadores autopropelidos e implementos diversos." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Valtra">
+            <h:panelGrid columns="2" cellpadding="10">
+               <p:graphicImage url="/imagens2/v.png" style=" width:50px" />
+                <h:outputText value="A Valtra fabrica tratores desde 1951, mas as raízes da empresa datam do século XIX. Os tratores Valtra de hoje representam o culminar de duas tradições: o Valmet da Finlândia e o Volvo BM da Suécia, ele mesmo um ramo do Eskilstuna Mekaniska Werkstad fundado por Theofron Munktell em 1832.
+									Desde os primeiros dias, Valmet sofreu grandes mudanças e desenvolvimento; Não apenas em seu nome, muda de Valmet e ValtraValmet para Valtra, mas também na inovação de produtos e serviços.
+" />
+            </h:panelGrid>
+        </p:tab>
+    </p:accordionPanel>
+</ui:define>
+</ui:composition>
